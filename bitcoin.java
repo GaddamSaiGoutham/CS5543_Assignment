@@ -23,7 +23,7 @@ import org.bitcoinj.script.ScriptChunk;
 
 import com.google.common.collect.ImmutableList;
 
-public class MultisigPresentation {
+public class Multi_sig {
 
 	static final NetworkParameters params = TestNet3Params.get();
 
@@ -150,10 +150,8 @@ public class MultisigPresentation {
 	public static byte[] hexToByte(String s) {
 	    int n = s.length();
 	    byte[] a = new byte[n / 2];
-	    for (int x = 0; x < len; x += 2) {
-	        a[x / 2] = (byte) ((Character.digit(s.charAt(x), 16) << 4)
-	                             + Character.digit(s.charAt(x+1), 16));
-	    }
+	    for (int x = 0; x < len; x += 2)
+	        a[x / 2] = (byte) ((Character.digit(s.charAt(x), 16) << 4) + Character.digit(s.charAt(x+1), 16));
 	    return a;
 	}
 }
